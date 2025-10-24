@@ -1,6 +1,7 @@
 
-import Link from "next/link";
 import type React from "react";
+import { ChevronDown, Search } from "lucide-react";
+import Link from "next/link";
 
 export default function BlogLayout({
   children,
@@ -8,26 +9,65 @@ export default function BlogLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      <header className="bg-background text-foreground py-4 px-6 shadow-sm">
-        <div className="container mx-auto flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold font-gelica">
-            Tumbas
-          </Link>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/" className="hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link href="/blog" className="text-primary font-semibold">
-              Blog
-            </Link>
-            <Link href="#" className="hover:text-primary transition-colors">
-              Contact
-            </Link>
-          </nav>
+    <div className="min-h-screen" style={{ backgroundColor: '#f9f0eb' }}>
+      <nav className="sticky top-0 z-50 border-b border-gray-200 backdrop-blur supports-[backdrop-filter]:bg-[#f9f0eb]/60" style={{ backgroundColor: '#f9f0eb' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">f</span>
+            </div>
+            <span className="font-bold text-lg text-black font-sans">Fixor</span>
+            <span className="text-xs text-black">™</span>
+          </div>
+          
+          {/* Navigation Links */}
+          <div className="hidden md:flex items-center gap-8">
+            <div className="flex items-center gap-1">
+              <a href="#features" className="text-sm text-black hover:text-gray-600 transition font-inter">
+              Features
+            </a>
+              <ChevronDown className="w-4 h-4 text-black" />
+            </div>
+            <div className="flex items-center gap-1">
+              <a href="#resources" className="text-sm text-black hover:text-gray-600 transition font-inter">
+                Resources
+              </a>
+              <ChevronDown className="w-4 h-4 text-black" />
+            </div>
+            <div className="flex items-center gap-1">
+              <a href="#developers" className="text-sm text-black hover:text-gray-600 transition font-inter">
+                Developers
+              </a>
+              <ChevronDown className="w-4 h-4 text-black" />
+            </div>
+            <a href="#integrations" className="text-sm text-black hover:text-gray-600 transition font-inter">
+              Integrations
+            </a>
+            <a href="#customers" className="text-sm text-black hover:text-gray-600 transition font-inter">
+              Customers
+            </a>
+          </div>
+          
+          {/* Right Side Actions */}
+          <div className="flex items-center gap-4">
+            <Search className="w-5 h-5 text-black" />
+            
+            {/* --- NAVBAR BUTTON UPDATED --- */}
+            <div className="bg-gradient-to-r from-green-600 to-pink-500 rounded-lg p-0.5">
+              <Link 
+                href="#waitlist" 
+                className="block bg-black hover:bg-gray-800 text-white px-6 py-2 rounded-md w-full transition-colors text-center"
+              >
+                Start a free trial
+              </Link>
+            </div>
+            {/* --- END OF UPDATE --- */}
+
+          </div>
         </div>
-      </header>
-      <main className="container mx-auto px-4 py-8">
+      </nav>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {children}
       </main>
     </div>
