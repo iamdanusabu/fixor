@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "November 29, 2025",
-    image: "/images/blog/scheduling-guide.jpg",
+    image: "/card1.png",
     content: `
       <p>For a biomedical service manager, dispatching isn't just scheduling. It's a high-stakes game of 3D chess. A single bad decision doesn't just mean a-wasted trip; it can mean a critical, life-saving device stays offline longer than necessary. </p>
       <br/>

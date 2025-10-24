@@ -18,10 +18,10 @@ export default function BlogLayout({
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">f</span>
+              <span className="text-white font-bold text-sm">b</span>
             </div>
             <span className="font-bold text-lg text-foreground font-sans">
-              Fixor
+              Bravio
             </span>
             <span className="text-xs text-foreground">™</span>
           </div>

@@ -91,9 +91,9 @@ export default function Home() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">f</span>
+              <span className="text-white font-bold text-sm">b</span>
             </div>
-            <span className="font-bold text-lg text-black font-sans">Fixor</span>
+            <span className="font-bold text-lg text-black font-sans">Bravio</span>
             <span className="text-xs text-black">™</span>
           </div>
           
@@ -126,9 +126,7 @@ export default function Home() {
           </div>
           
           {/* Right Side Actions */}
-          <div className="flex items-center gap-4">
-            <Search className="w-5 h-5 text-black" />
-            
+          <div className="flex items-center gap-4">            
             {/* --- NAVBAR BUTTON UPDATED --- */}
             <div className="bg-gradient-to-r from-green-600 to-pink-500 rounded-lg p-0.5">
               <Link 
@@ -146,18 +144,23 @@ export default function Home() {
 
       {/* News Banner */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="flex items-center justify-center">
-          <div className="bg-white rounded-xl px-6 py-3 shadow-sm border border-gray-200 flex items-center gap-4">
-            <div className="bg-black text-white px-3 py-1 rounded-md text-xs font-medium">
-              NEWS
-            </div>
-            <span className="text-black text-sm font-inter">
-              MedTech Solutions Reduces Service Response Time by 40% with Fixor
-            </span>
-            <ArrowRight className="w-4 h-4 text-black" />
-          </div>
-        </div>
+  <div className="flex items-center justify-center">
+    <div className="bg-white rounded-xl px-6 py-3 shadow-sm border border-gray-200 flex items-center gap-4">
+      <div className="bg-black text-white px-3 py-1 rounded-md text-xs font-medium">
+        NEWS
       </div>
+      <span className="text-black text-sm font-inter">
+        MedTech Solutions Reduces Service Response Time by 40% with Bravio
+      </span>
+      {/* Wrap the ArrowRight component in a Link component 
+        and apply cursor-pointer for visual feedback 
+      */}
+      <Link href="/blog" className="cursor-pointer">
+        <ArrowRight className="w-4 h-4 text-black" />
+      </Link>
+    </div>
+  </div>
+</div>
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
@@ -269,7 +272,7 @@ export default function Home() {
           >
             <img 
               src="/hero.png" // <-- Put your clean dashboard image here
-              alt="Fixor Dashboard" 
+              alt="Bravio Dashboard" 
               className="rounded-lg"
             />
             <p className="text-center text-sm text-muted-foreground mt-4">
@@ -490,7 +493,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-gelica">Join the Waitlist</h2>
             <p className="text-lg text-muted-foreground">
-              Be among the first to access Fixor, the FSM platform built specifically for biomedical equipment service companies. Early
+              Be among the first to access Bravio, the FSM platform built specifically for biomedical equipment service companies. Early
               access members get lifetime discounts and priority support.
             </p>
           </div>
@@ -540,7 +543,7 @@ export default function Home() {
                   {loading ? "Submitting..." : "Join the Waitlist"}
                 </Button>
                 <p className="text-xs text-muted-foreground text-center">
-                  We respect your privacy. No spam, just updates about BioMed FSM platform development.
+                  We respect your privacy. No spam, just updates about Bravio platform development.
                 </p>
               </form>
             )}
@@ -555,9 +558,9 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-6 h-6 bg-black rounded flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xs">f</span>
+                  <span className="text-primary-foreground font-bold text-xs">b</span>
                 </div>
-                <span className="font-bold font-gelica">Fixor</span>
+                <span className="font-bold font-gelica">Bravio</span>
               </div>
               <p className="text-sm text-muted-foreground font-inter">Field service management platform for biomedical equipment service companies.</p>
             </div>
@@ -618,7 +621,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p>&copy; 2025 Fixor. All rights reserved.</p>
+            <p>&copy; 2025 Bravio by nevolabs. All rights reserved.</p>
             <div className="flex gap-4 mt-4 md:mt-0">
               <a href="#" className="hover:text-foreground transition">
                 Twitter

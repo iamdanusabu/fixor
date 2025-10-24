@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "November 8, 2025",
-    image: "/images/blog/team-efficiency.jpg",
+    image: "/card1.png",
     content: `
       <p>In the biomedical service industry, efficiency isn't just about saving money—it's about maximizing equipment uptime for critical patient care. Yet, many small and medium-sized service teams are stuck in a cycle of inefficiency: technicians zigzagging across town, filling out duplicate paper forms, and making multiple trips for one repair.</p>
       <br/>

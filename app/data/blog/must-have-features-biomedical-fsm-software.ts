@@ -9,7 +9,7 @@ export default {
   
   author: "Bravio Team",
   date: "October 25, 2025",
-  image: "/images/blog/biomedical-fsm-features.jpg",
+  image: "/card1.png",
   content: `
     <p>Running a biomedical service company is all about precision, compliance, and safety. The stakes are high, and your customers (and auditors) expect perfection.</p>
     <br/>

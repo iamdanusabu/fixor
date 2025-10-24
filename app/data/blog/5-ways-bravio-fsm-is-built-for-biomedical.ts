@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "December 19, 2025",
-    image: "/images/blog/bravio-unique-features.jpg",
+    image: "/card1.png",
     content: `
       <p>If you're reading this, you already know the difference between a generic Field Service Management (FSM) platform and a specialized one. You've likely suffered through a system built for HVAC or plumbing, struggling to force it to handle your complex compliance and inventory needs.</p>
       <br/>

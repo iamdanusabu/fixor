@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "November 22, 2025",
-    image: "/images/blog/digital-reports.jpg",
+    image: "/card1.png",
     content: `
       <p>How long does it take your company to get paid for a job? If you're like many small biomedical service companies, the answer is "weeks."</p>
       <br/>

@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "December 5, 2025",
-    image: "/images/blog/pm-profit-graph.jpg",
+    image: "/card1.png",
     content: `
       <p>It's 10:00 AM on a Tuesday. You get a frantic call: a critical ventilator in a hospital's ICU is down. You drop everything, pull your top tech off a scheduled job, and send them 45 minutes across town to fight the fire. This is the "break-fix" cycle.</p>
       <br/>

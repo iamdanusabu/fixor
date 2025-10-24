@@ -4,7 +4,7 @@ export default {
   excerpt: "Stop trying to fit a square peg in a round hole. See why your current FSM software is failing to handle biomedical compliance, calibration, and part tracking.",
   author: "Bravio Team",
   date: "October 25, 2025",
-  image: "/images/blog/fsm-fails-biomedical.jpg",
+  image: "/card1.png",
   content: `
     <p>If you run a small or medium-sized biomedical equipment service company, you know your job is unique. You're not just fixing an HVAC unit; you're maintaining life-saving devices. The stakes are infinitely higher.</p>
     <br/>
