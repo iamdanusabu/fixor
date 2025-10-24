@@ -12,7 +12,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
       <article className="prose lg:prose-xl dark:prose-invert mx-auto">
         <header className="mb-8 text-center">
           <h1 className="text-4xl font-bold tracking-tighter leading-tight md:text-5xl mb-2">
@@ -42,6 +41,5 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
         <div className="space-y-6 text-lg" dangerouslySetInnerHTML={{ __html: post.content }} />
       </article>
-    </div>
   );
 }
