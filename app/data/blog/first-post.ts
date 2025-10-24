@@ -1,6 +1,6 @@
 
 export default {
-    slug: "technical-skills-for-non-technical-founders",
+    slug: "first-post",
     title: "6 Technical Skills A Non-Technical Startup Founder Needs To Have",
     excerpt: "By learning a small amount of technical skills, you, as a non-technical startup founder, can support your company in smaller ways. Here’s our list of need-to-know technical skills.",
     author: "John Griebel",
