@@ -9,9 +9,9 @@ export default function BlogPage() {
   return (
     <div className="grid md:grid-cols-3 gap-8">
       <div className="md:col-span-1 space-y-8">
-        <Card className="p-6" style={{ backgroundColor: '#f2e8e2' }}>
-          <h3 className="text-xl font-bold mb-4 font-gelica text-black">About Bits</h3>
-          <p className="text-black">
+        <Card className="p-6 bg-card">
+          <h3 className="text-xl font-bold mb-4 font-gelica text-card-foreground">About Bits</h3>
+          <p className="text-card-foreground">
             Founded in 2022, we are a team of curious builders with a decade of
             experience in fintech, open banking, and infrastructure. We have
             firsthand experience with the challenges faced by fintechs, banks,
@@ -19,8 +19,8 @@ export default function BlogPage() {
             source integrations.
           </p>
         </Card>
-        <Card className="p-6" style={{ backgroundColor: '#f2e8e2' }}>
-          <h3 className="text-xl font-bold mb-4 font-gelica text-black">Top stories</h3>
+        <Card className="p-6 bg-card">
+          <h3 className="text-xl font-bold mb-4 font-gelica text-card-foreground">Top stories</h3>
           <Link href={`/blog/${topStory.slug}`} className="space-y-4 block">
             <Image
               src={topStory.image}
@@ -29,13 +29,13 @@ export default function BlogPage() {
               height={200}
               className="rounded-lg object-cover aspect-video"
             />
-            <h4 className="font-bold text-lg text-black">Building bit by bit</h4>
-            <p className="text-black hover:underline font-semibold">Read the story</p>
+            <h4 className="font-bold text-lg text-card-foreground">Building bit by bit</h4>
+            <p className="text-primary hover:underline font-semibold">Read the story</p>
           </Link>
         </Card>
       </div>
       <div className="md:col-span-2 space-y-8">
-        <h1 className="text-5xl font-bold tracking-tighter font-gelica text-black">Blog</h1>
+        <h1 className="text-5xl font-bold tracking-tighter font-gelica">Blog</h1>
         {posts.map((post) => (
           <Link
             href={`/blog/${post.slug}`}
@@ -50,10 +50,10 @@ export default function BlogPage() {
               className="rounded-lg object-cover aspect-video transition-transform group-hover:scale-105"
             />
             <div>
-              <h3 className="text-xl font-bold group-hover:underline text-black">
+              <h3 className="text-xl font-bold group-hover:underline">
                 {post.title}
               </h3>
-              <p className="text-gray-600 text-sm mt-1">{post.date}</p>
+              <p className="text-muted-foreground text-sm mt-1">{post.date}</p>
             </div>
           </Link>
         ))}

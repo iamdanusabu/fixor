@@ -12,12 +12,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-      <article className="mx-auto text-black">
+      <article className="prose lg:prose-xl dark:prose-invert mx-auto">
         <header className="mb-8 text-center">
           <h1 className="text-4xl font-bold tracking-tighter leading-tight md:text-5xl mb-2">
             {post.title}
           </h1>
-          <div className="flex items-center justify-center text-sm text-gray-600 mt-4">
+          <div className="flex items-center justify-center text-sm text-muted-foreground mt-4">
             <div className="flex items-center">
               <Avatar className="h-9 w-9 mr-3">
                 <AvatarImage src="/placeholder-user.jpg" alt={post.author} />
