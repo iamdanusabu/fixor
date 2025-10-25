@@ -132,10 +132,10 @@ export default function Home() {
             {/* --- NAVBAR BUTTON UPDATED --- */}
             <div className="bg-gradient-to-r from-green-600 to-pink-500 rounded-lg p-0.5">
               <Link 
-                href="#waitlist" 
+                href="/demo" 
                 className="block bg-black hover:bg-gray-800 text-white px-6 py-2 rounded-md w-full transition-colors text-center"
               >
-                Start a free trial
+                Book a Meeting
               </Link>
             </div>
             {/* --- END OF UPDATE --- */}
