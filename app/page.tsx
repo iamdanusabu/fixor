@@ -84,7 +84,9 @@ export default function Home() {
   // --- End of Form Logic ---
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f9f0eb' }}>
+    // FIX: Set overflow-x-hidden on the main container to hide any accidental horizontal scrollbar, 
+    // although the best practice is to fix the overflowing element itself.
+    <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: '#f9f0eb' }}>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-gray-200 backdrop-blur supports-[backdrop-filter]:bg-[#f9f0eb]/60" style={{ backgroundColor: '#f9f0eb' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
@@ -145,24 +147,22 @@ export default function Home() {
       </nav>
 
       {/* News Banner */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
   <div className="flex items-center justify-center">
-    <div className="bg-white rounded-xl px-6 py-3 shadow-sm border border-gray-200 flex items-center gap-4">
-      <div className="bg-black text-white px-3 py-1 rounded-md text-xs font-medium">
+    <div className="bg-white rounded-lg sm:rounded-xl px-3 sm:px-6 py-2 sm:py-3 shadow-sm border border-gray-200 flex items-center gap-2 sm:gap-4">
+      <div className="bg-black text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-md text-[10px] sm:text-xs font-medium">
         NEWS
       </div>
-      <span className="text-black text-sm font-inter">
+      <span className="text-black text-xs sm:text-sm font-inter leading-tight">
         MedTech Solutions Reduces Service Response Time by 40% with Bravio
       </span>
-      {/* Wrap the ArrowRight component in a Link component 
-        and apply cursor-pointer for visual feedback 
-      */}
       <Link href="/blog" className="cursor-pointer">
-        <ArrowRight className="w-4 h-4 text-black" />
+        <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-black" />
       </Link>
     </div>
   </div>
 </div>
+
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
@@ -189,7 +189,11 @@ export default function Home() {
 
       {/* Partner Logos */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex items-center justify-center gap-8 opacity-60">
+        {/* FIX: Changed `flex items-center justify-center gap-8 opacity-60` to 
+          `flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-60` 
+          to allow logos to wrap on small screens, preventing horizontal overflow. 
+        */}
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-60">
           <div className="text-gray-400 font-semibold text-sm">OLIRO</div>
           <div className="text-gray-400 font-semibold text-sm">coinmotion</div>
           <div className="text-gray-400 font-semibold text-sm">Brite*</div>
@@ -562,7 +566,8 @@ export default function Home() {
                 <div className="w-6 h-6 bg-black rounded flex items-center justify-center">
                   <span className="text-primary-foreground font-bold text-xs">b</span>
                 </div>
-                <span className="font-bold font-gelica">Bravio</span>
+                {/* FIX: Changed font-gelica to text-wrap to prevent overflow on very small screens */}
+                <span className="font-bold font-gelica text-wrap">Bravio</span> 
               </div>
               <p className="text-sm text-muted-foreground font-inter">Field service management platform for biomedical equipment service companies.</p>
             </div>
@@ -637,6 +642,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
       </footer>
     </div>
   )
