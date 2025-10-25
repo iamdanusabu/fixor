@@ -559,91 +559,114 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-border bg-muted/30 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-6 h-6 bg-black rounded flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xs">b</span>
-                </div>
-                {/* FIX: Changed font-gelica to text-wrap to prevent overflow on very small screens */}
-                <span className="font-bold font-gelica text-wrap">Bravio</span> 
-              </div>
-              <p className="text-sm text-muted-foreground font-inter">Field service management platform for biomedical equipment service companies.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4 font-gelica">Product</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="#features" className="hover:text-foreground transition">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a href="#benefits" className="hover:text-foreground transition">
-                    Benefits
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-foreground transition">
-                    Pricing
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4 font-gelica">Company</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="#" className="hover:text-foreground transition">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-foreground transition">
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-foreground transition">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4 font-gelica">Legal</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="#" className="hover:text-foreground transition">
-                    Privacy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-foreground transition">
-                    Terms
-                  </a>
-                </li>
-              </ul>
-            </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
+    {/* THE FIX IS HERE:
+      Base grid is 6-column (for mobile).
+      Desktop grid is 4-column (md:).
+    */}
+    <div className="grid grid-cols-6 md:grid-cols-4 gap-8 mb-8">
+      
+      {/* Column 1: Brand */}
+      {/* Spans 6 cols on mobile (full width) */}
+      {/* Spans 1 col on desktop */}
+      <div className="col-span-6 md:col-span-1">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-6 h-6 bg-black rounded flex items-center justify-center">
+            <span className="text-primary-foreground font-bold text-xs">b</span>
           </div>
-          <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p>&copy; 2025 Bravio by nevolabs. All rights reserved.</p>
-            <div className="flex gap-4 mt-4 md:mt-0">
-              <a href="#" className="hover:text-foreground transition">
-                Twitter
-              </a>
-              <a href="#" className="hover:text-foreground transition">
-                LinkedIn
-              </a>
-              <a href="#" className="hover:text-foreground transition">
-                GitHub
-              </a>
-            </div>
-          </div>
+          <span className="font-bold font-gelica text-wrap">Bravio</span>
         </div>
+        <p className="text-sm text-muted-foreground font-inter">
+          Field service management platform for biomedical equipment service companies.
+        </p>
+      </div>
 
-      </footer>
+      {/* Column 2: Product */}
+      {/* Spans 2 cols on mobile (1/3 width) */}
+      {/* Spans 1 col on desktop */}
+      <div className="col-span-2 md:col-span-1">
+        <h4 className="font-semibold mb-4 font-gelica">Product</h4>
+        <ul className="space-y-2 text-sm text-muted-foreground">
+          <li>
+            <a href="#features" className="hover:text-foreground transition">
+              Features
+            </a>
+          </li>
+          <li>
+            <a href="#benefits" className="hover:text-foreground transition">
+              Benefits
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-foreground transition">
+              Pricing
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Column 3: Company */}
+      {/* Spans 2 cols on mobile (1/3 width) */}
+      {/* Spans 1 col on desktop */}
+      <div className="col-span-2 md:col-span-1">
+        <h4 className="font-semibold mb-4 font-gelica">Company</h4>
+        <ul className="space-y-2 text-sm text-muted-foreground">
+          <li>
+            <a href="#" className="hover:text-foreground transition">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-foreground transition">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-foreground transition">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Column 4: Legal */}
+      {/* Spans 2 cols on mobile (1/3 width) */}
+      {/* Spans 1 col on desktop */}
+      <div className="col-span-2 md:col-span-1">
+        <h4 className="font-semibold mb-4 font-gelica">Legal</h4>
+        <ul className="space-y-2 text-sm text-muted-foreground">
+          <li>
+            <a href="#" className="hover:text-foreground transition">
+              Privacy
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-foreground transition">
+              Terms
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Bottom Bar: Copyright & Socials (This part remains the same) */}
+    <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-muted-foreground">
+      <p>&copy; 2025 Bravio by nevolabs. All rights reserved.</p>
+      <div className="flex gap-4 mt-4 md:mt-0">
+        <a href="#" className="hover:text-foreground transition">
+          Twitter
+        </a>
+        <a href="#" className="hover:text-foreground transition">
+          LinkedIn
+        </a>
+        <a href="#" className="hover:text-foreground transition">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   )
 }
