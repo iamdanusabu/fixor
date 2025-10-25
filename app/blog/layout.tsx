@@ -16,15 +16,15 @@ export default function BlogLayout({
       <nav className="sticky top-0 z-50 border-b border-border backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">b</span>
-            </div>
-            <span className="font-bold text-lg text-foreground font-sans">
-              Bravio
-            </span>
-            <span className="text-xs text-foreground">™</span>
-          </div>
+          <Link href="/" className="flex items-center gap-2">
+  <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+    <span className="text-white font-bold text-sm">b</span>
+  </div>
+  <span className="font-bold text-lg text-foreground font-sans">
+    Bravio
+  </span>
+  <span className="text-xs text-foreground">™</span>
+</Link>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">

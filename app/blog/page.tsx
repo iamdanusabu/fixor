@@ -1,11 +1,62 @@
+"use client"; 
+
 import Link from "next/link";
 import Image from "next/image";
 import { posts } from "./posts";
+import { useState } from "react"; 
+
+// IMPORTANT: Ensure this is the correct, deployed Web App URL for your subscription script.
+const SUBSCRIPTION_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwo9LrDST6fm8un0XJkSXLeB4kfEz7O9XV7lbYEZpCNSgmP4nbclyYPT7F0_CSb-Y7uqw/exec";
 
 export default function BlogList() {
+  // State to manage the form input and feedback
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
+
+  // Function to handle form submission via fetch (AJAX)
+  const handleSubscribeSubmit = async (e) => {
+    e.preventDefault(); // Prevents the browser from opening a new tab
+    setLoading(true);
+    setMessage('');
+
+    try {
+      // Format data as application/x-www-form-urlencoded, which the Apps Script expects
+      const formData = new URLSearchParams();
+      formData.append('email', email); 
+
+      const response = await fetch(SUBSCRIPTION_SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formData.toString(),
+      });
+
+      // Your Apps Script returns plain text like "Success! You are now subscribed..."
+      const resultText = await response.text();
+
+      // Check for the success phrase
+      if (resultText.includes("Success!")) {
+        setMessage("Success! You are now subscribed.");
+        setEmail(''); // Clear the input on success
+      } else {
+        // Display the error message returned by the script or a generic message
+        setMessage(`❌ Error: ${resultText || "Subscription failed. Please check the Apps Script logs."}`);
+      }
+
+    } catch (error) {
+      setMessage("❌ An unexpected network error occurred.");
+      console.error('Submission error:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+
   return (
     <main>
-      {/* --- 1. HERO SECTION (Unchanged) --- */}
+      {/* --- 1. HERO SECTION (SUBSCRIPTION FORM) --- */}
       <section
         className="rounded-lg"
         style={{ backgroundColor: "#f7e8dc" }}
@@ -21,36 +72,50 @@ export default function BlogList() {
               technology, solutions, and updates.
             </p>
           </div>
-          {/* Hero Form */}
+          {/* Hero Form - USES CLIENT-SIDE SUBMISSION */}
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <form className="flex flex-col md:flex-row gap-3">
+            <form 
+              // Use the client-side handler to prevent new tab opening
+              onSubmit={handleSubscribeSubmit}
+              className="flex flex-col md:flex-row gap-3"
+            >
               <label htmlFor="email" className="sr-only">
                 Enter your email
               </label>
               <input
                 type="email"
                 id="email"
+                name="email"
                 placeholder="Enter your email"
                 className="flex-grow p-3 border rounded-md text-gray-900"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <button
                 type="submit"
-                className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-md hover:bg-blue-700 transition-colors"
+                disabled={loading} // Disable during submission
+                className="bg-black text-white font-semibold py-3 px-6 rounded-md hover:bg-black/60 transition-colors disabled:opacity-50"
               >
-                Subscribe
+                {loading ? 'Submitting...' : 'Subscribe'}
               </button>
             </form>
+            {/* Display Submission Message */}
+            {message && (
+              <p className={`mt-3 text-sm ${message.startsWith('✅') ? 'text-green-600' : 'text-red-500'}`}>
+                {message}
+              </p>
+            )}
           </div>
         </div>
       </section>
 
-      {/* --- 2. POSTS GRID --- */}
+      {/* --- 2. POSTS GRID (Unchanged) --- */}
       <section className="max-w-7xl mx-auto p-6 md:p-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {posts.map((post: any) => (
             <div
               key={post.slug}
-              // --- CHANGE 1: Added background color and shadow ---
               className="flex flex-col rounded-lg overflow-hidden"
               style={{ backgroundColor: "" }}
             >
@@ -62,14 +127,12 @@ export default function BlogList() {
                     alt={post.title}
                     width={600}
                     height={400}
-                    // --- Removed margin-bottom and rounded-md from image ---
                     className="w-full h-52 object-cover hover:opacity-90 transition-opacity"
                   />
                 </Link>
               )}
 
               {/* Post Content */}
-              {/* --- CHANGE 2: Added padding to content --- */}
               <div className="p-4">
                 <p className="text-sm text-gray-500 mb-2">
                   {post.author} • {post.date}
