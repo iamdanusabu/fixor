@@ -1,10 +1,11 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist_Mono, Inter } from "next/font/google"
+import { Inter } from "next/font/google"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
+// Ensure these font paths are exactly correct for your project structure
 const gelica = localFont({
   src: [
     {
@@ -12,116 +13,122 @@ const gelica = localFont({
       weight: "400",
       style: "normal",
     },
+    // If you have bold/medium weights, add them here for better rendering
   ],
   variable: "--font-gelica",
+  display: "swap", // Improves loading performance
 })
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 })
 
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
-
 export const metadata: Metadata = {
-  title: "Bravio - Best-in-Class FSM Software for Biomedical Equipment Service | Automated Service Reports",
-  description: "Bravio is the leading Field Service Management software for biomedical equipment service companies. Automate service reports, streamline work orders, ensure compliance, and manage medical device maintenance with our best-in-class platform built for small to medium healthcare technology businesses.",
-  keywords: [
-    "Bravio FSM",
-    "biomedical equipment service software",
-    "automated service reports medical devices",
-    "biomed service management automation",
-    "best FSM for healthcare equipment",
-    "medical device service automation",
-    "automated biomed reporting",
-    "hospital equipment maintenance software",
-    "field service management healthcare",
-    "CMMS for biomedical equipment",
-    "medical equipment work order automation",
-    "biomed technician software",
-    "healthcare technology management",
-    "medical device compliance automation",
-    "preventive maintenance automation",
-    "biomedical asset management",
-    "HTM software automation",
-    "service report generation medical equipment",
-    "biomed workflow automation",
-    "medical equipment tracking software"
-  ],
-  authors: [{ name: "Bravio" }],
-  creator: "Bravio",
-  publisher: "Bravio",
-  generator: "v0.app",
-  applicationName: "Bravio",
-  referrer: "origin-when-cross-origin",
-  category: "Healthcare Technology Management Software",
-  classification: "Business Automation Software",
-  
-  // Open Graph metadata for social sharing
+  // Putting "Biomedical" first can sometimes help slightly with immediate user relevance in SERPs
+  title: "Biomedical Field Service Software for ISO & HTM Teams | Bravio",
+  description:
+    "Bravio is the FSM software built for biomedical and ISO service teams. Automate work orders, ISO compliance, PM schedules, and asset management in one platform.",
+
+    keywords: [
+      // Core primary terms
+      "biomedical field service software",
+      "ISO biomedical service software",
+      "HTM service management platform",
+      "clinical engineering CMMS",
+      
+      // Specific niche terms (High Intent)
+      "medical equipment repair software",
+      "medical device maintenance tracker",
+      "calibration management for biomedical",
+      "Joint Commission medical equipment compliance",
+      "ISO 13485 service management",
+      
+      // Feature-specific long-tail
+      "biomedical work order management",
+      "preventive maintenance scheduling medical",
+      "medical parts inventory software",
+      "hospital asset management software",
+      "field service mobile app for biomedical technicians",
+      "AAMI compliance documentation",
+
+      "simple field service scheduling",
+    "small business FSM software",
+    "easy to use CMMS",
+    "affordable biomedical software",
+    "FSM for small service teams",
+    
+    // --- Feature Specific (Pain point solvers) ---
+    "service report automation",
+    "digital work order app",
+    "technician dispatching software",
+    "paperless field service",
+    "medical asset tracking for small business",
+    
+    // --- Competitive Alternatives ---
+    "ServiceNow alternative for small business",
+    "simpler alternative to ServiceTitan",
+    "biomedical CMMS alternative",
+    "alternative to ServiceMax",
+    "alternative to FieldEdge",
+    "alternative to ServicePro",
+    "alternative to ServicePower",
+    "alternative to ServicePro",
+    "alternative to ServicePro",
+    ],
+
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://getbravio.app",
-    siteName: "Bravio - Biomedical Equipment Service Management",
-    title: "Bravio - Automate Service Reports & Biomedical Equipment Management",
-    description: "Best-in-class FSM software for biomedical equipment service companies. Automate service reports, work orders, compliance tracking, and all your service management needs in one powerful platform.",
+    url: "https://hellobravio.com",
+    siteName: "Bravio",
+    title: "FSM Software for Biomedical & ISO Repair Teams",
+    description:
+      "The all-in-one platform for biomedical service. Manage work orders, ensure ISO compliance, and track medical assets efficiently.",
     images: [
       {
-        url: "https://getbravio.app/og-image.jpg",
+        url: "https://hellobravio.com/og-image.jpg", // Ensure this image has text that says "Biomedical FSM"
         width: 1200,
         height: 630,
-        alt: "Bravio Biomedical Equipment Service Management Dashboard - Automated Service Reports",
+        alt: "Bravio - Biomedical Field Service Software Dashboard",
       },
     ],
   },
-  
-  // Twitter Card metadata
+
   twitter: {
     card: "summary_large_image",
-    title: "Bravio - Best FSM for Biomedical Equipment Service",
-    description: "Automate service reports and streamline biomedical equipment management with Bravio's best-in-class FSM software",
-    images: ["https://getbravio.app/twitter-image.jpg"],
-    creator: "@bravio",
+    title: "Bravio — Biomedical FSM Software",
+    description:
+      "Automate service reports, PM schedules, and ISO compliance for medical equipment teams.",
+    images: ["https://hellobravio.com/twitter-image.jpg"],
+    creator: "@braviohq", // MAKE SURE THIS IS REAL, or remove this line if you don't have an active X account yet
   },
-  
-  // Robots directives
+
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
-  
-  // Verification tags (add your actual verification codes)
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
-  },
-  
-  // Additional metadata
+
   alternates: {
-    canonical: "https://getbravio.app",
+    canonical: "https://hellobravio.com",
   },
-  
-  // App-specific metadata
+
+  // Good for mobile users adding to home screen
   appleWebApp: {
     capable: true,
-    statusBarStyle: "default",
     title: "Bravio FSM",
+    statusBarStyle: "default",
   },
-  
-  formatDetection: {
-    telephone: false,
-  },
-  
-  // Manifest for PWA (if applicable)
-  manifest: "/manifest.json",
+
+  metadataBase: new URL("https://hellobravio.com"),
 }
 
 export default function RootLayout({
@@ -129,98 +136,56 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // Enhanced Schema for better Google rich results understanding
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Bravio",
+    url: "https://hellobravio.com",
+    // "BusinessApplication" is a standard Google understands well, supplemented by your description
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web, iOS, Android",
+    inLanguage: "en-US",
+    description:
+      "Easy-to-use Field Service Management (FSM) software for small to mid-sized biomedical and ISO service teams. Streamlines scheduling, dispatching, and service reporting.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/Waitlist", // Good signal if you are in pre-launch/beta
+    },
+    author: {
+      "@type": "Organization",
+      name: "Bravio",
+    },
+  }
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Bravio",
+    url: "https://hellobravio.com",
+    logo: "https://hellobravio.com/logo.png",
+    // Important: Add actual social profiles here when you have them to establish brand entity
+    sameAs: [
+        "https://www.linkedin.com/company/bravio", 
+        "https://x.com/braviohq"
+    ],
+  }
+
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${gelica.variable}`}>
       <head>
-        {/* Structured data for search engines */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              "name": "Bravio",
-              "applicationCategory": "BusinessApplication",
-              "operatingSystem": "Web Browser",
-              "offers": {
-                "@type": "Offer",
-                "price": "Contact for pricing",
-                "priceCurrency": "USD"
-              },
-              "description": "Best-in-class Field Service Management software for biomedical equipment service companies with automated service report generation and comprehensive workflow automation",
-              "audience": {
-                "@type": "Audience",
-                "audienceType": "Small to Medium Biomedical Equipment Service Companies"
-              },
-              "featureList": [
-                "Automated service report generation",
-                "Work order management and automation",
-                "Preventive maintenance scheduling",
-                "Compliance tracking and documentation",
-                "Inventory management",
-                "Technician dispatch and routing",
-                "Real-time reporting and analytics",
-                "Mobile app for field technicians",
-                "Medical device asset tracking",
-                "Integration with existing systems"
-              ],
-              "screenshot": "https://getbravio.app/screenshots/dashboard.jpg",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5",
-                "ratingCount": "1",
-                "bestRating": "5"
-              }
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
         />
-        
-        {/* Organization structured data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Bravio",
-              "url": "https://getbravio.app",
-              "logo": "https://getbravio.app/logo.png",
-              "description": "Leading provider of Field Service Management software for biomedical equipment service companies",
-              "sameAs": [
-                "https://www.linkedin.com/company/bravio",
-                "https://twitter.com/bravio",
-                "https://www.facebook.com/bravio"
-              ]
-            })
-          }}
-        />
-        
-        {/* Breadcrumb structured data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://getbravio.app"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "FSM Software",
-                  "item": "https://getbravio.app/features"
-                }
-              ]
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className={`${gelica.variable} ${inter.variable} font-sans antialiased`}>
+      <body className="min-h-screen bg-white font-sans antialiased selection:bg-neutral-900 selection:text-white">
         {children}
         <Analytics />
       </body>

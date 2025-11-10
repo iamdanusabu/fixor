@@ -194,12 +194,12 @@ export default function Home() {
           to allow logos to wrap on small screens, preventing horizontal overflow. 
         */}
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-60">
-          <div className="text-gray-400 font-semibold text-sm">OLIRO</div>
-          <div className="text-gray-400 font-semibold text-sm">coinmotion</div>
-          <div className="text-gray-400 font-semibold text-sm">Brite*</div>
-          <div className="text-gray-400 font-semibold text-sm">CleverCards</div>
-          <div className="text-gray-400 font-semibold text-sm">lesslie</div>
-          <div className="text-gray-400 font-semibold text-sm">Fondo</div>
+        <div className="text-gray-400 font-semibold text-sm">Tri-State Biomedical Repair</div>
+<div className="text-gray-400 font-semibold text-sm">PrimeCare Biomedical Services</div>
+<div className="text-gray-400 font-semibold text-sm">NorthStar Clinical Equipment Services</div>
+<div className="text-gray-400 font-semibold text-sm">VitalOps Biomedical</div>
+<div className="text-gray-400 font-semibold text-sm">Reliant Medical Equipment Repair</div>
+
         </div>
       </section>
 
@@ -207,7 +207,7 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
         <div className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl p-6 flex items-center justify-center">
           <img 
-            src="/hero.png" 
+            src="https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/dashboard.png" 
             alt="Biomedical Equipment Service Management Platform" 
             className="max-w-full h-auto rounded-lg shadow-lg"
           />
@@ -320,7 +320,7 @@ export default function Home() {
                   
                   <div className="flex-1 pt-6 flex justify-center items-center">
                     <img
-                      src="/card2.png"
+                      src="https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/fsm.png"
                       alt="Mobile Field Service UI Mockup"
                       className="w-full h-auto rounded-lg border object-cover"
                     />
@@ -354,7 +354,7 @@ export default function Home() {
                   
                   <div className="flex-1 pt-6 flex justify-center items-center">
                     <img
-                      src="/card1.png"
+                      src="https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/servicereports.png"
                       alt="Equipment Service Reports UI Mockup"
                       className="w-full h-auto rounded-lg border object-cover"
                     />
@@ -389,7 +389,7 @@ export default function Home() {
                   
                   <div className="flex-1 pt-6 flex justify-center items-center">
                     <img
-                      src="/card1.png" // Path to your specific image
+                      src="https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/pm.png" // Path to your specific image
                       alt="Preventive Maintenance Schedule UI Mockup"
                       className="w-full h-auto rounded-lg border object-cover"
                     />
@@ -423,7 +423,7 @@ export default function Home() {
                   
                   <div className="flex-1 pt-6 flex justify-center items-center">
                     <img
-                      src="/card1.png" // Path to your specific image
+                      src="https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/inventorynew.png" // Path to your specific image
                       alt="Parts Inventory UI Mockup"
                       className="w-full h-auto rounded-lg border object-cover"
                     />
@@ -457,7 +457,7 @@ export default function Home() {
                   
                   <div className="flex-1 pt-6 flex justify-center items-center">
                     <img
-                      src="/card1.png" // Path to your specific image
+                      src="https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/compliance.png" // Path to your specific image
                       alt="Compliance Documentation UI Mockup"
                       className="w-full h-auto rounded-lg border object-cover"
                     />
