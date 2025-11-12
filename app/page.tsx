@@ -576,9 +576,11 @@ export default function Home() {
       {/* Spans 1 col on desktop */}
       <div className="col-span-6 md:col-span-1">
         <div className="flex items-center gap-2 mb-4">
-          <div className="w-6 h-6 bg-black rounded flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-xs">b</span>
-          </div>
+        <img
+    src="https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/bravio-logo-new.png"
+    alt="Bravio logo"
+    className="w-8 h-8 object-contain"
+  />
           <span className="font-bold font-gelica text-wrap">Bravio</span>
         </div>
         <p className="text-sm text-muted-foreground font-inter">
