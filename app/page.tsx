@@ -93,7 +93,7 @@ export default function Home() {
           {/* Logo */}
 <Link href="/" className="flex items-center gap-2">
   <img
-    src="https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/bravio-logo.png"
+    src="https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/bravio-logo-new.png"
     alt="Bravio logo"
     className="w-8 h-8 object-contain"
   />
