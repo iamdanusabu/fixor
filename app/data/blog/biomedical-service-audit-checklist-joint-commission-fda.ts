@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "October 25, 2025",
-    image: "/card2.png",
+    image: "https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/blog-assets/sticke.png",
     content: `
       <p>For a biomedical service manager, few phrases cause more stress than "The Joint Commission is here" or "We have an FDA auditor on-site."</p>
       <br/>

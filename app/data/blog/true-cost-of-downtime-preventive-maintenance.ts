@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "December 5, 2025",
-    image: "/card1.png",
+    image: "https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/blog-assets/downtime.jpg",
     content: `
       <p>It's 10:00 AM on a Tuesday. You get a frantic call: a critical ventilator in a hospital's ICU is down. You drop everything, pull your top tech off a scheduled job, and send them 45 minutes across town to fight the fire. This is the "break-fix" cycle.</p>
       <br/>

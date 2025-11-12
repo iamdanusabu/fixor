@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "October 25, 2025",
-    image: "/card5.png",
+    image: "https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/blog-assets/kpis.png",
     content: `
       <p>How healthy is your biomedical service business? <em>Really?</em></p>
       <br/>

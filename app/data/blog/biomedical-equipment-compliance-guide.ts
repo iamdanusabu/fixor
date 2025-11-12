@@ -9,7 +9,7 @@ export default {
   
   author: "Bravio Team",
   date: "November 1, 2025",
-  image: "/card1.png",
+  image: "https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/blog-assets/audit.jpg",
   content: `
     <p>For a biomedical equipment service company, a service sticker on a device is just the tip of the iceberg. The real work—the part that keeps your clients compliant and patients safe—lives in your documentation. But navigating the complex worlds of both FDA and HIPAA requirements can feel like walking a tightrope.</p>
     <br/>

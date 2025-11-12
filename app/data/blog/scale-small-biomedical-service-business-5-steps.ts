@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "December 12, 2025",
-    image: "/card1.png",
+    image: "https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/blog-assets/5%20step%20plan.png",
     content: `
       <p>You did it. You left your old job, started your own biomedical service company, and built a reputation for quality work. You have two or three technicians, a handful of loyal clients, and you're busy—<em>too</em> busy.</p>
       <br/>

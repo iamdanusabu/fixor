@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "November 15, 2025",
-    image: "/card1.png",
+    image: "https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/blog-assets/inventory.png",
     content: `
       <p>Your technician is on-site at a hospital, 45 minutes from the office. They've diagnosed a faulty controller on a critical patient monitor. They open their van, search through the bins, and... the part isn't there. Now you have to pay for a second trip, the client's equipment stays down longer, and your profit on the job is gone.</p>
       <br/>

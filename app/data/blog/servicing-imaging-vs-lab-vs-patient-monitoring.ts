@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "October 25, 2025",
-    image: "/card4.png",
+    image: "https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/blog-assets/showdown.jpg",
     content: `
       <p>Ask a generic FSM provider what they know about "medical equipment service," and they'll likely talk about assets and work orders. Ask a biomedical service manager, and they'll tell you that <strong>servicing imaging equipment</strong> is a completely different universe from <strong>lab analyzer maintenance</strong>.</p>
       <br/>

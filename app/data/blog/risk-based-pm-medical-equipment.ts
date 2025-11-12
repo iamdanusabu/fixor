@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "October 25, 2025",
-    image: "/card3.png",
+    image: "https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/blog-assets/traditional.png",
     content: `
       <p>For decades, the standard for medical device maintenance was simple: follow the manufacturer's recommended PM schedule. Service a device every 6 or 12 months, check the box, and move on.</p>
       <br/>

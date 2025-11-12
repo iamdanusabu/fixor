@@ -9,7 +9,7 @@ export default {
     
     author: "Bravio Team",
     date: "October 25, 2025",
-    image: "/card6.png",
+    image: "https://gqvbkzcscjeaghodwxnz.supabase.co/storage/v1/object/public/assets/blog-assets/supertechs.png",
     content: `
       <p>Your biomedical technicians are highly skilled professionals. They can diagnose a fault on a complex lab analyzer or recalibrate a life-support ventilator. So why are they still managing their day on a paper clipboard?</p>
       <br/>
