@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /demo
+
+Sitemap: https://www.bravio.co/sitemap.xml
