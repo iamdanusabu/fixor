@@ -81,14 +81,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hellobravio.com",
+    url: "https://bravio.nevolabs.cloud",
     siteName: "Bravio",
     title: "FSM Software for Biomedical & ISO Repair Teams",
     description:
       "The all-in-one platform for biomedical service. Manage work orders, ensure ISO compliance, and track medical assets efficiently.",
     images: [
       {
-        url: "https://hellobravio.com/og-image.jpg", // Ensure this image has text that says "Biomedical FSM"
+        url: "https://bravio.nevolabs.cloud/og-image.jpg", // Ensure this image has text that says "Biomedical FSM"
         width: 1200,
         height: 630,
         alt: "Bravio - Biomedical Field Service Software Dashboard",
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     title: "Bravio — Biomedical FSM Software",
     description:
       "Automate service reports, PM schedules, and ISO compliance for medical equipment teams.",
-    images: ["https://hellobravio.com/twitter-image.jpg"],
+    images: ["https://bravio.nevolabs.cloud/twitter-image.jpg"],
     creator: "@braviohq", // MAKE SURE THIS IS REAL, or remove this line if you don't have an active X account yet
   },
 
@@ -118,7 +118,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://hellobravio.com",
+    canonical: "https://bravio.nevolabs.cloud",
   },
 
   // Good for mobile users adding to home screen
@@ -128,7 +128,7 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
   },
 
-  metadataBase: new URL("https://hellobravio.com"),
+  metadataBase: new URL("https://bravio.nevolabs.cloud"),
 }
 
 export default function RootLayout({
@@ -141,7 +141,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "Bravio",
-    url: "https://hellobravio.com",
+    url: "https://bravio.nevolabs.cloud",
     // "BusinessApplication" is a standard Google understands well, supplemented by your description
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web, iOS, Android",
@@ -164,8 +164,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Bravio",
-    url: "https://hellobravio.com",
-    logo: "https://hellobravio.com/logo.png",
+    url: "https://bravio.nevolabs.cloud",
+    logo: "https://bravio.nevolabs.cloud/logo.png",
     // Important: Add actual social profiles here when you have them to establish brand entity
     sameAs: [
         "https://www.linkedin.com/company/bravio", 
